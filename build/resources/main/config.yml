@@ -1,0 +1,46 @@
+# KindlyTPA Configuration
+
+# Time in seconds that players will be invulnerable after teleportation
+protection-duration: 5
+
+# Cooldown in seconds between TPA requests
+tpa-cooldown: 30
+
+# Messages (supports color codes with '&')
+messages:
+  prefix: "&7[&bKindlyTPA&7] "
+  
+  # TPA request messages
+  request:
+    sent: "&aYou have sent a teleport request to &e%player%&a."
+    received: "&e%player% &ahas requested to teleport to you. Type &e/tpaccept &aor &e/tpadeny&a."
+    no-pending: "&cYou don't have any pending teleport requests."
+    expired: "&cYour teleport request to &e%player% &chas expired."
+    cooldown: "&cYou need to wait &e%time% &cseconds before sending another request."
+    self: "&cYou cannot send a teleport request to yourself."
+    not-found: "&cPlayer not found or is offline."
+  
+  # TPA accept messages
+  accept:
+    sender: "&aYour teleport request has been accepted. Teleporting in 3 seconds..."
+    receiver: "&aYou have accepted the teleport request."
+    no-request: "&cYou don't have any pending teleport request from this player."
+  
+  # TPA deny messages
+  deny:
+    sender: "&cYour teleport request has been denied."
+    receiver: "&aYou have denied the teleport request."
+    no-request: "&cYou don't have any pending teleport request from this player."
+  
+  # Protection message
+  protection:
+    enabled: "&aYou are now protected for &e%seconds% &aseconds after teleportation."
+    disabled: "&cYour teleportation protection has ended."
+
+  # Help message
+  help:
+    - "&b----- &eKindlyTPA Help &b-----"
+    - "&e/tpa <player> &7- Send a teleport request to a player"
+    - "&e/tpaccept [player] &7- Accept a teleport request"
+    - "&e/tpadeny [player] &7- Deny a teleport request"
+    - "&e/tpacancel &7- Cancel your sent teleport request"

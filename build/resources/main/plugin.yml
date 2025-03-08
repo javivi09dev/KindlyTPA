@@ -1,0 +1,40 @@
+name: KindlyTPA
+version: '1.0'
+main: me.javivi.ktpa.KindlyTPA
+api-version: '1.21'
+prefix: ktpa
+load: STARTUP
+authors: [ Javivi ]
+description: Plugin that controls tpa with protection and customizable messages
+
+commands:
+  tpa:
+    description: Send a teleport request to another player
+    usage: /tpa <player>
+    permission: kindlytpa.tpa
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept [player]
+    permission: kindlytpa.tpaccept
+  tpadeny:
+    description: Deny a teleport request
+    usage: /tpadeny [player]
+    permission: kindlytpa.tpadeny
+  tpacancel:
+    description: Cancel your teleport request
+    usage: /tpacancel
+    permission: kindlytpa.tpacancel
+
+permissions:
+  kindlytpa.tpa:
+    description: Allows players to send teleport requests
+    default: true
+  kindlytpa.tpaccept:
+    description: Allows players to accept teleport requests
+    default: true
+  kindlytpa.tpadeny:
+    description: Allows players to deny teleport requests
+    default: true
+  kindlytpa.tpacancel:
+    description: Allows players to cancel teleport requests
+    default: true
