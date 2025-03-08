@@ -26,6 +26,7 @@ public final class KindlyTPA extends JavaPlugin {
         getCommand("tpaccept").setExecutor(new TPAcceptCommand(this));
         getCommand("tpadeny").setExecutor(new TPADenyCommand(this));
         getCommand("tpacancel").setExecutor(new TPACancelCommand(this));
+        getCommand("ktpa").setExecutor(new ReloadCommand(this));
         
         // Register events
         getServer().getPluginManager().registerEvents(new ProtectionListener(this), this);
@@ -42,6 +43,17 @@ public final class KindlyTPA extends JavaPlugin {
         protectedPlayers.clear();
         
         getLogger().info("KindlyTPA has been disabled!");
+    }
+    
+    /**
+     * Reloads the plugin configuration
+     */
+    public void reloadPluginConfig() {
+        // Reload config from disk
+        reloadConfig();
+        
+        // Log the reload
+        getLogger().info("Configuration reloaded successfully!");
     }
     
     // Utility methods for TPA management

@@ -24,6 +24,10 @@ commands:
     description: Cancel your teleport request
     usage: /tpacancel
     permission: kindlytpa.tpacancel
+  ktpa:
+    description: Administrative commands for KindlyTPA
+    usage: /ktpa reload
+    permission: kindlytpa.reload
 
 permissions:
   kindlytpa.tpa:
@@ -38,3 +42,6 @@ permissions:
   kindlytpa.tpacancel:
     description: Allows players to cancel teleport requests
     default: true
+  kindlytpa.reload:
+    description: Allows reloading the plugin configuration
+    default: op
